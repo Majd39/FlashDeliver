@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:languagproject/component/TextFormFieled.dart';
+import 'package:languagproject/controller/myHomePageController.dart';
 
 class MyHomePage extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
+    Myhomepagecontroller controler= Get.put(Myhomepagecontroller());
+
     return Form(
       key: _formKey,
       child: Scaffold(
@@ -39,7 +42,7 @@ class MyHomePage extends StatelessWidget {
                     Expanded(
                       child: TextFormFieled(
                         width: double.infinity,
-                        onTap: () {},
+                        onChanged: (value) {},
                         hintText: "Search",
                       ),
                     ),
